@@ -1,3 +1,4 @@
+*.pyc
 /bootstrap/data
 /bootstrap/tmp
 /classes/			# all class files

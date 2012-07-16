@@ -1,7 +1,5 @@
-tools
-=========
-
 GitNotify
+=========
 
 Checks your origin repo for new commits and shows a message when found.
 
@@ -17,5 +15,4 @@ Basic configuration:
 Put in ~/.gitnotify such contents:
 timer = 600
 git_dir = <full path to git dir>
-
 

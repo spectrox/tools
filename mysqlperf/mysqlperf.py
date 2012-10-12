@@ -60,7 +60,7 @@ class SqlPerf:
 	def run(self, query):
 		cursor = self.con.cursor()
 		start = time.time()
-		for i in range(1, self.params['-c']):
+		for i in range(1, int(self.params['-c'])):
 			cursor.execute(query)
 		end = time.time()
 		return {
@@ -70,8 +70,8 @@ class SqlPerf:
 			}
 
 	def print_result(self):
-		print 'Query #1: ', self.q1['time'], '/', (self.q1['time']/self.params['-c'])
-		print 'Query #2: ', self.q2['time'], '/', (self.q2['time']/self.params['-c'])
+		print 'Query #1: ', self.q1['time'], '/', (self.q1['time']/int(self.params['-c']))
+		print 'Query #2: ', self.q2['time'], '/', (self.q2['time']/int(self.params['-c']))
 
 if __name__ == "__main__":
 	s = SqlPerf()
